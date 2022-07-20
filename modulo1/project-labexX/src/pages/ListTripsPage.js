@@ -20,7 +20,7 @@ const ListTripsPage = () => {
   return (
     <div>
       <HeroContainer>
-        <VideoContainer autoPlay loop muted>
+          <VideoContainer autoPlay loop muted>
           <source src={powerSlap} />
         </VideoContainer>
         {isLoading && <p>Carregando...</p>}

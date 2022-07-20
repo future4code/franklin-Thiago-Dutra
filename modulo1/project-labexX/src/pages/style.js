@@ -10,6 +10,17 @@ export const HeroContainer = styled.div`
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
   object-fit: contain;
 `;
+export const HeroContainer2 = styled.div`
+  height: 300px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  flex-direction: column;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  object-fit: contain;
+`;
 export const HeroContainerButton = styled.div`
   display: flex;
   justify-content: center;
@@ -26,13 +37,17 @@ export const VideoContainer = styled.video`
 export const ContainerH1 = styled.h1`
   color: #fff;
   font-size: 100px;
-  margin-top: -100px;
   font-family: "Anek Latin", sans-serif;
 `;
-export const ContainerH3 = styled.h3`
+export const FonteH1 = styled.h1`
   color: #fff;
-  font-size: 20px;
-  margin-top: -100px;
+  font-size: 40px;
+  font-family: "Smooch", cursive;
+`;
+export const TextoH3 = styled.h3`
+  color: #fff;
+  font-size: 15px;
+  color: black;
   font-family: "Anek Latin", sans-serif;
 `;
 export const ContainerP = styled.p`
@@ -41,7 +56,16 @@ export const ContainerP = styled.p`
   font-size: 32px;
   font-family: "Smooch", cursive;
 `;
+export const ContainerPa = styled.p`
+  box-sizing: border-box;
+  width: 200px;
+  color: black;
+  font-size: 20px;
+  font-family: "Smooch", cursive;
+`;
 export const DivInput = styled.div`
+  width: 300px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -87,11 +111,28 @@ export const Button2 = styled.button`
   outline: none;
   border: none;
   cursor: pointer;
-  background-color:black;
+  background-color: black;
   color: white;
   border: 1px solid #fff;
   transition: all 0.3s ease-out;
   margin-right: 50px;
+  font-family: "Staatliches", cursive;
+  :hover {
+    transition: all 0.3s ease-out;
+    background: transparent;
+    color: #fff;
+    transition: 250ms;
+  }
+`;
+export const Button3 = styled.button`
+  width: 200px;
+  font-size: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  border: 1px solid #fff;
+  transition: all 0.3s ease-out;
   font-family: "Staatliches", cursive;
   :hover {
     transition: all 0.3s ease-out;
