@@ -5,15 +5,9 @@ import { token } from "../constants/token";
 import { useProtectedPage } from "./AdminHomePage";
 import {
   Button3,
-  ContainerH1,
-  ContainerH3,
-  ContainerP,
-  ContainerPa,
-  DivInput,
   FonteH1,
   HeroContainer,
   HeroContainer2,
-  HeroContainerButton,
   TextoH3,
 } from "./style";
 
@@ -53,7 +47,7 @@ const TripDetailsPage = () => {
         },
       })
       .then((resp) => {
-        console.log(resp.data);
+        alert("Deu certo! ")
         setState();
         detailsPage()
       })
@@ -62,6 +56,7 @@ const TripDetailsPage = () => {
         console.log(error);
       });
   };
+
   const candidates =
     tripDetails.candidates &&
     tripDetails.candidates.length > 0 &&

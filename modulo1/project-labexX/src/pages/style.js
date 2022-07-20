@@ -64,8 +64,6 @@ export const ContainerPa = styled.p`
   font-family: "Smooch", cursive;
 `;
 export const DivInput = styled.div`
-  width: 300px;
-  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
