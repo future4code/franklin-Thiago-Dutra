@@ -1,0 +1,1 @@
+console.log("Olá, ", process.argv[2],"! voce tem", process.argv[3],"anos. em sete anos terá", Number(process.argv[3]) + 7);
