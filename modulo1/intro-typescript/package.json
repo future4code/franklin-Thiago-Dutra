@@ -1,11 +1,16 @@
 {
-  "name": "package-json",
+  "name": "intro-typescript",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "intro.js",
   "scripts": {
-    "start": "node ./index.js"
+    "start": "tsc && node ./build/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Thiago Dutra",
-  "license": "ISC"
+  "keywords": [],
+  "author": "dutra",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.7.4"
+  }
 }
