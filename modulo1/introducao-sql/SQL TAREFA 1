@@ -1,0 +1,176 @@
+SQL TAREFA 1 
+
+USE `franklin-thiago-dutra`
+CREATE TABLE Actor (
+    id VARCHAR(255) PRIMARY KEY,
+    name VARCHAR (255) NOT NULL,
+    salary FLOAT NOT NULL,
+    birth_date DATE NOT NULL,
+    gender VARCHAR(6) NOT NULL
+);
+//1 - VARCHAR RECEBE UMA STRING DE ATÉ 255 CARACTERES, FLOAT RECEBE NÚMEROS INTEIROS E NÃO INTEIROS, DATE RECEBE DATA.
+
+SHOW DATABASES
+A) MOSTRA TODAS AS BASES DO BANCO
+SHOW TABLES
+B)MOSTRA TODAS AS TABELAS DO BANCO
+DESCRIBE Actor 
+C) MOSTRA TODAS AS INFORMAÇÕES DA TABELA
+
+//2 - 
+INSERT INTO Actor (id, name, salary, birth_date, gender)
+VALUES(
+  "001", 
+  "Tony Ramos",
+  400000,
+  "1948-08-25", 
+  "male"
+);
+A) INSERT INTO Actor (id, name, salary, birth_date, gender)
+VALUES(
+  "002", 
+  "Glória Perez",
+  1200000,
+  "1963-08-23", 
+  "male"
+);
+B)ERRO DE PRIMARY KEY DUPLICADA,ID JÁ EXISTENTE IMPOSSÍVEL CADASTRAR COM OUTRA CHAVE PUNICA
+C) FALTANDO PARÂMETROS PARA INSERIR
+INSERT INTO Actor (id, name, salary)
+VALUES(
+  "003", 
+  "Fernanda Montenegro",
+  300000,
+  "1929-10-19", 
+  "female"
+);
+D) FALTANDO PARÂMETROS PARA INSERIR
+INSERT INTO Actor (id, salary, birth_date, gender)
+VALUES(
+  "004",
+  400000,
+  "1949-04-18", 
+  "male"
+);
+E) DATA NO MODELO ERRADO
+INSERT INTO Actor (id, name, salary, birth_date, gender)
+VALUES(
+  "005", 
+  "Juliana Paes",
+  719333.33,
+  1979-03-26, 
+  "female"
+);
+INSERT INTO Actor (id, name, salary, birth_date, gender)
+VALUES(
+  "003", 
+  "Fernanda Montenegro",
+  300000,
+  "1929-10-19", 
+  "female"
+);
+INSERT INTO Actor (id, name, salary, birth_date, gender)
+VALUES(
+  "004", 
+  "Antônio Fagundes",
+  400000,
+  "1949-04-18", 
+  "male"
+);
+INSERT INTO Actor (id, name, salary, birth_date, gender)
+VALUES(
+  "005", 
+  "Juliana Paes",
+  719333.33,
+  "1979-03-26", 
+  "female"
+);
+SELECT * FROM Actor
+
+SELECT id, salary from Actor
+
+SELECT id, name from Actor WHERE gender = "male"
+A)
+SELECT id, name from Actor WHERE gender = "female"
+B)
+SELECT salary from Actor WHERE name = "Tony Ramos"
+C)
+// Retorna os usuários que não foram cadastrados genero
+SELECT * from Actor WHERE gender = "invalid"
+D)
+SELECT id,name,salary from Actor WHERE salary <= 500000
+E)
+//NOME DA TABELA NO SELECT INCORRETO
+SELECT id, nome from Actor WHERE id = "002"
+
+SELECT * FROM Actor
+WHERE (name LIKE "A%" OR name LIKE "J%") AND salary > 300000
+
+SELECT * FROM Actor
+WHERE (name NOT LIKE "A%") AND salary > 350000
+
+SELECT * FROM Actor
+WHERE (name LIKE "%g%" OR name LIKE "%G%" OR name LIKE "%a%" OR name LIKE "%A%") AND salary BETWEEN 350000 AND 900000
+
+//TAREFA 2 =====================================================================
+
+USE `franklin-thiago-dutra`
+CREATE TABLE Filmes (
+    id VARCHAR(255) PRIMARY KEY,
+    name VARCHAR (255) NOT NULL,
+    sinopse TEXT(255) NOT NULL,
+    lancamento_date DATE NOT NULL,
+    avaliacao FLOAT NOT NULL
+);
+
+INSERT INTO Filmes (id, name, sinopse, lancamento_date, avaliacao)
+VALUES(
+  "001", 
+  "Se eu fosse você",
+  "Cláudio e Helena são casados há muitos anos e enfrentam a rotina do casamento. Um dia eles são atingidos por um fenômeno inexplicável e trocam de corpos",
+  "2006-01-08", 
+  7
+);
+
+INSERT INTO Filmes (id, name, sinopse, lancamento_date, avaliacao)
+VALUES(
+  "002", 
+  "Doce de mãe",
+  "Dona Picucha, uma animada senhora de 85 anos, sempre causa grandes confusões. A vida dela e dos seus quatro filhos sofre uma reviravolta depois que Zaida, empregada e amiga de Dona Picucha, anuncia que vai se casar e não poderá mais morar com ela",
+  "2012-12-27", 
+  10
+);
+
+INSERT INTO Filmes (id, name, sinopse, lancamento_date, avaliacao)
+VALUES(
+  "003", 
+  "Dona Flor e Seus Dois Maridos",
+  "Dona Flor é uma sedutora professora de culinária casada com Vadinho, que só quer saber de farras e jogatina nas boates. A vida de abusos acaba por acarretar sua morte precoce.",
+  "2017-11-02", 
+  8
+);
+
+INSERT INTO Filmes (id, name, sinopse, lancamento_date, avaliacao) 
+VALUES(
+  "004",
+    "Deus é Brasileiro",
+    "Cansado da humanidade, Deus resolve tirar férias para descansar e procura alguém no Brasil capaz de substituí-lo. O borracheiro e pescador Taoca e a solitária Madá deverão guiá-lo até Quincas das Mulas, candidato de Deus a santo.",
+    "2003-01-31",
+    9
+)
+
+//6
+SELECT id,name,avaliacao from Filmes WHERE id="002"
+
+SELECT * FROM Filmes WHERE name = "Deus é Brasileiro";
+
+SELECT id, name, sinopse FROM Filmes WHERE avaliacao >= 7;
+
+SELECT * FROM Filmes WHERE name LIKE "%deus%" OR sinopse LIKE "%deus%"
+
+SELECT * FROM Filmes
+WHERE lancamento_date < "2022-08-16";
+
+SELECT * FROM Filmes
+WHERE lancamento_date < "2020-05-04" AND avaliacao >= 7;
+
