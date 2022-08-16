@@ -48,10 +48,12 @@ const accounts: Count[] = [
     ],
   },
 ];
+//Recuperar Usuários cadastrados
 app.get("/users", (req, res) => {
   res.send(accounts);
 });
 
+// Cadastro de conta
 app.post("/create-account", (req, res) => {
   const body: Count = req.body;
   const birth = new Date(body.birth);
@@ -83,6 +85,7 @@ app.post("/create-account", (req, res) => {
   }
 });
 
+// Para mostrar saldo
 app.get("/account-saldo/:cpf", (req, res) => {
   const cpf = req.params.cpf;
 
@@ -108,6 +111,8 @@ app.get("/deposit/:cpf", (req, res) => {
     res.send("Nome Incorreto");
   }
 });
+
+//Pagar conta
 app.get("/pay/:cpf", (req, res) => {
   const cpf = req.params.cpf;
   const body: ExtractList = req.body;
