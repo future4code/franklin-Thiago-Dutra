@@ -1,0 +1,34 @@
+### 1) Signup
+POST http://localhost:3003/users/signup
+Content-Type: application/json
+
+{
+    "name": "Beltrano",
+    "email": "beltrano@gmail.com",
+    "password": "abc123"
+}
+
+### 2)Login
+POST http://localhost:3003/users/login
+Content-Type: application/json
+
+{
+    "email": "astrodev@gmail.com",
+    "password": "bananinha"
+}
+
+### 3)GetAll
+GET http://localhost:3003/users
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NzVlZmUyLTJkOGItNDRjZC04YWFmLTlkYjhiMmIwNTRiNyIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NjM2MzA5MTAsImV4cCI6MTY2MzcxNzMxMH0.JY0y2qUs6Iumd_425JRedeVsD5t8ch7GOZ4zpCy29Ck
+
+{
+    "email": "astrodev@gmail.com",
+    "password": "abc123"
+}
+
+### 3)deleteUser
+DELETE http://localhost:3003/users/6975efe2-2d8b-44cd-8aaf-9db8b2b054b7
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJiOWI3ZWU4LWFlNGItNGJkMS05YmQ2LWU3ZTIxNTk0Mzk5YiIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY2MzYzMjM5MCwiZXhwIjoxNjYzNzE4NzkwfQ.VT0nj9ZGtAdfd82dVxzi0-iY7L5a0JV1tXJKcLWDmW8
+
