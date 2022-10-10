@@ -1,6 +1,13 @@
-Detalhes:
-Para rodar a API:
-- NPM I
-- YARN DEV
+## Installation
 
-- PORTA: LOCALHOST:3003
+Use the package manager [npm install](https://npm.com) to install project.
+
+```bash
+npm install
+```
+
+## Usage
+
+```python
+yarn dev
+```
