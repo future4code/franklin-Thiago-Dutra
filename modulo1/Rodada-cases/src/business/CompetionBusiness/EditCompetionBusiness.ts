@@ -5,7 +5,6 @@ const editCompetionDatabase = new EditCompetionDatabase();
 
 export default class EditCompetionBusiness {
   public editCompetion = async (input: Competion, id: string) => {
-
     const status = input.status;
     const title = input.title;
     const editCompetion = new Competion(status, title);

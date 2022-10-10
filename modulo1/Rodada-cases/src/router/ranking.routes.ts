@@ -6,4 +6,3 @@ const rankingController = new RankingController();
 export const rankingRouter = Router();
 //Cadastrar player na competição
 rankingRouter.get("/:id", rankingController.getRanking);
-

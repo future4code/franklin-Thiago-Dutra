@@ -5,7 +5,8 @@ export default class CreateCadPlayerCompetionDatabase extends BaseDatabase {
   public static TABLE_CAD_PLAYER = "case2_cad_player";
 
   public createCadPlayerCompetion = async (
-    cadPlayerCompetion: CadPlayerCompetionDb) => {
+    cadPlayerCompetion: CadPlayerCompetionDb
+  ) => {
     try {
       const cadPlayerCompetionDb: CadPlayerCompetionDb = {
         value: cadPlayerCompetion.value,

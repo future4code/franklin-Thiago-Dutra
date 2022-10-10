@@ -3,10 +3,16 @@ import CreateCadPlayerCompetionController from "../controller/CadPlayerCompetion
 import GetAllCadPlayerCompetionController from "../controller/CadPlayerCompetionController/getAllCadPlayerCompetionController";
 
 const createPlayerController = new CreateCadPlayerCompetionController();
-const getAllCadPlayerCompetionController = new GetAllCadPlayerCompetionController();
+const getAllCadPlayerCompetionController =
+  new GetAllCadPlayerCompetionController();
 
 export const cadPlayerCompetionRouter = Router();
 //Cadastrar player na competição
-cadPlayerCompetionRouter.post( "/",createPlayerController.createCadPlayerCompetion);
-cadPlayerCompetionRouter.get("/", getAllCadPlayerCompetionController.getAllCadPlayerCompetion);
-
+cadPlayerCompetionRouter.post(
+  "/",
+  createPlayerController.createCadPlayerCompetion
+);
+cadPlayerCompetionRouter.get(
+  "/",
+  getAllCadPlayerCompetionController.getAllCadPlayerCompetion
+);

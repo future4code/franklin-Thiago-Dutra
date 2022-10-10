@@ -7,8 +7,9 @@ export default class GetAllCadPlayerCompetionDatabase extends BaseDatabase {
     try {
       const result = await BaseDatabase.connection(
         GetAllCadPlayerCompetionDatabase.TABLE_CAD_PLAYER
-      ).select("*")
-      .orderBy('value', 'desc');
+      )
+        .select("*")
+        .orderBy("value", "desc");
 
       return result;
     } catch (error: any) {

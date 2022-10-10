@@ -4,7 +4,8 @@ const getAllCadPlayerCompetionDatabase = new GetAllCadPlayerCompetionDatabase();
 
 export default class GetAllCadPlayerCompetionBusiness {
   public getAllCadPlayerCompetionBusiness = async () => {
-    const response = getAllCadPlayerCompetionDatabase.getAllCadPlayerCompetionDatabase();
+    const response =
+      getAllCadPlayerCompetionDatabase.getAllCadPlayerCompetionDatabase();
 
     return response;
   };

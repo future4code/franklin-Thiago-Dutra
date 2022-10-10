@@ -1,5 +1,4 @@
 export interface CompetionDb {
-    status: string;
-    title: string;
-  }
-  
+  status: string;
+  title: string;
+}

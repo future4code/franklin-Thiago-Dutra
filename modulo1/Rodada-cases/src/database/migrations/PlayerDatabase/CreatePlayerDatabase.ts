@@ -11,8 +11,8 @@ export default class CreatePlayerDatabase extends BaseDatabase {
       age: player.age,
     };
 
-    await BaseDatabase.connection(
-        CreatePlayerDatabase.TABLE_PLAYER
-    ).insert(playerDB);
+    await BaseDatabase.connection(CreatePlayerDatabase.TABLE_PLAYER).insert(
+      playerDB
+    );
   };
 }

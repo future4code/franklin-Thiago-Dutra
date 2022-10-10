@@ -1,5 +1,4 @@
 export interface PlayerDb {
-    name: string;
-    age: string;
-  }
-  
+  name: string;
+  age: string;
+}

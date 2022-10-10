@@ -6,11 +6,6 @@ import GetAllPlayerController from "../controller/PlayerController/GetAllPlayerC
 const createPlayerController = new CreatePlayerController();
 const getAllPlayerController = new GetAllPlayerController();
 
-
-
-
-
-
 export const playerRouter = Router();
 
 //Player
@@ -18,6 +13,3 @@ playerRouter.post("/", createPlayerController.createPlayer);
 playerRouter.get("/", getAllPlayerController.getAllPlayer);
 // playerRouter.post("/:id",editCompetionController.editCompetion);
 // playerRouter.delete("/:id",deleteCompetionController.deleteCompetion);
-
-
-

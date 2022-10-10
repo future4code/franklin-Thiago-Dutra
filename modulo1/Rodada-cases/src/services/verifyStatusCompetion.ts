@@ -7,12 +7,11 @@ export default class verifyStatusCompetion {
     try {
       const result = await BaseDatabase.connection(
         verifyStatusCompetion.TABLE_COMPETION
-      ).select()
-      .where({id: id})   
+      )
+        .select()
+        .where({ id: id });
 
       return result[0];
-    } catch (error) {
-      
-    }
+    } catch (error) {}
   };
 }

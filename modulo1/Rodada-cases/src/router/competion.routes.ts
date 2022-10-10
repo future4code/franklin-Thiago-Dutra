@@ -9,16 +9,10 @@ const getAllCompetionController = new GetAllCompetionController();
 const editCompetionController = new EditCompetionController();
 const deleteCompetionController = new DeleteCompetionController();
 
-
-
-
 export const competionRouter = Router();
 
 //Competion
 competionRouter.post("/", createCompetionController.createCompetion);
 competionRouter.get("/", getAllCompetionController.getAllCompetion);
-competionRouter.put("/:id",editCompetionController.editCompetion);
-competionRouter.delete("/:id",deleteCompetionController.deleteCompetion);
-
-
-
+competionRouter.put("/:id", editCompetionController.editCompetion);
+competionRouter.delete("/:id", deleteCompetionController.deleteCompetion);
