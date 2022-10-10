@@ -1,0 +1,55 @@
+###Cadastrar Competicao
+POST http://localhost:3003/competion
+Content-Type: application/json
+
+{
+    "status": "false", 
+    "title": "Lancamento de dardo"
+}
+
+### Todas as competicoes
+GET http://localhost:3003/competion
+
+###Edit Competion
+PUT http://localhost:3003/competion/4
+Content-Type: application/json
+
+{
+    "status": "false"
+}
+### Deletar Competicao
+DELETE http://localhost:3003/competion/4
+
+### Criar Player
+POST http://localhost:3003/player
+Content-Type: application/json
+
+{
+    "name": "thiago", 
+    "age": "15"
+}
+
+### Todos os players
+GET http://localhost:3003/player
+
+### Cadastrar um player em uma competição
+POST http://localhost:3003/cad
+Content-Type: application/json
+
+{
+	"value":"9",
+	"unity":"m",
+	"playerId":8,
+	"competionId":3
+}
+
+### Todos os resultados de players em competição
+GET http://localhost:3003/cad
+
+### Ranking
+GET http://localhost:3003/ranking/3
+Content-Type: application/json
+
+{
+	"orderType":"desc"
+}

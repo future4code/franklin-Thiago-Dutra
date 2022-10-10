@@ -13,6 +13,10 @@ export default class EditCompetionController {
         title: req.body.title,
     }
       const response = await editCompetionBusiness.editCompetion(input, id);
+      if(!response){
+        res.status(403).send({ message: 'Competição não encontrada' });
+
+      }
       res.status(201).send(response);
     } catch (error) {
       res.send(error);

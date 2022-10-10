@@ -13,7 +13,6 @@ export default class CreatePlayerController {
         }
         if(!input.name || !input.age){
             res.status(403).send({ message: 'Informe todos os campos da requisição' });
-
           }
         const response = await createPlayerBusiness.createPlayer(input)
         res.status(201).send(response)

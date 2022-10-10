@@ -17,7 +17,7 @@ export const competionRouter = Router();
 //Competion
 competionRouter.post("/", createCompetionController.createCompetion);
 competionRouter.get("/", getAllCompetionController.getAllCompetion);
-competionRouter.post("/:id",editCompetionController.editCompetion);
+competionRouter.put("/:id",editCompetionController.editCompetion);
 competionRouter.delete("/:id",deleteCompetionController.deleteCompetion);
 
 

@@ -4,7 +4,7 @@ const getAllPlayerDatabase = new GetAllPlayerDatabase();
 
 export default class GetAllPlayerBusiness {
   public getAllPlayerBusiness = async () => {
-    const response = getAllPlayerDatabase.getAllPlayerDatabase();
+    const response = await getAllPlayerDatabase.getAllPlayerDatabase();
 
     return response;
   };
